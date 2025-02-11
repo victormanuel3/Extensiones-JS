@@ -120,14 +120,13 @@ function fn_show_alt_image() {
                     tooltip.style.textAlign = "center";
                     tooltip.style.transform = "translateX(-50%)";
                     tooltip.className = "image-tooltip";
-
-                    // Truncate long text and add ellipsis
+                    
                     let displayText = img.alt.length > 100 
                         ? img.alt.substring(0, 100) + "..." 
                         : img.alt;
+                    
                     tooltip.innerText = displayText;
 
-                    // Positioning
                     const rect = img.getBoundingClientRect();
                     tooltip.style.left = `${rect.left + rect.width / 2}px`;
                     tooltip.style.top = `${window.scrollY + rect.top - 40}px`;
