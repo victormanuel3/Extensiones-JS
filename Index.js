@@ -1,3 +1,24 @@
+const facebookBtn = document.getElementById('facebook-btn');
+const amazonBtn = document.getElementById('amazon-btn');
+const facebookOptions = document.getElementById('facebook-options');
+const amazonOptions = document.getElementById('amazon-options');
+
+facebookBtn.addEventListener('click', () => {
+    facebookBtn.classList.add('active');
+    amazonBtn.classList.remove('active');
+    facebookOptions.classList.add('active');
+    amazonOptions.classList.remove('active');
+});
+
+amazonBtn.addEventListener('click', () => {
+    amazonBtn.classList.add('active');
+    facebookBtn.classList.remove('active');
+    amazonOptions.classList.add('active');
+    facebookOptions.classList.remove('active');
+});
+
+// ----------------
+
 let btn_set_background = document.getElementById("set-background-red");
 btn_set_background.addEventListener("click", set_background);
 
